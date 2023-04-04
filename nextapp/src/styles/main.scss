@@ -1,0 +1,46 @@
+@import 'bulma/sass/utilities/_all.sass';
+
+$primary-color: var(--color-1);
+$secondary-color: var(--color-2);
+$light-color: var(--color-3);
+$lighter-color: var(--color-4);
+$lightest-color: var(--color-5);
+
+.navbar {
+  background-image: linear-gradient(to right, $primary-color, $secondary-color);
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  .navbar-brand {
+    color: $lightest-color;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-menu {
+    .navbar-item {
+      color: $lightest-color;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $light-color;
+      }
+    }
+  }
+}
+
+.navbar:hover {
+  background-image: linear-gradient(to right, $secondary-color, $primary-color);
+
+  .navbar-brand {
+    color: $light-color;
+  }
+
+  .navbar-menu {
+    .navbar-item {
+      color: $light-color;
+    }
+  }
+}
